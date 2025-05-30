@@ -4,7 +4,6 @@ package packageA;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-
 /**
  *
  * @author chuon
@@ -89,13 +88,30 @@ package packageA;
     - charAt(i) : lây ky tu tai vi tri i
     - subString(a,b) : lay chuoi con tu vi tri a den b - 1
     - toUpperCase / toLowerCase : chuyen toan bo thanh chuoi viet hoa / thuong
+    - regex
 3. Collection
-    - List -> ArrayList :
-                    + 
+    - List -> ArrayList: truy cap du lieu nhanh -> tim kiem lau
+                    +
+    - Set -> TreeSet: truy cap du lieu lau -> tim kiem nhanh
+    - Map -> HashMap: truy cap du lieu nhanh -> tim kiem nhanh -> ton bo nho
 4. File -> LAB211
 5. Try catch -> LAB211
-*/
+ */
+ /*
+    User -> staff
+         -> customer
+    Item -> drink
+         -> food
+ */
 public class Tester {
-    protected int test;
 
+    public static void main(String[] args) {
+        Item trasua = new Drink("D001", "Tra Sua", 30000);
+        Customer thuy = new Customer("C001", "Do Thanh Thuy", 20);
+        thuy.addItem(trasua);
+        thuy.addItem(trasua);
+        thuy.addItem(trasua);
+        System.out.println(trasua.getPrice() * thuy.removeItem(trasua));
+        System.out.println(thuy.getCash());
+    }
 }
