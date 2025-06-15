@@ -91,9 +91,12 @@ package packageA;
     - regex
 3. Collection
     - List -> ArrayList: truy cap du lieu nhanh -> tim kiem lau
-                    +
+                    + truy cap theo index la mot so nguyen (int)
+                    + index:value
     - Set -> TreeSet: truy cap du lieu lau -> tim kiem nhanh
-    - Map -> HashMap: truy cap du lieu nhanh -> tim kiem nhanh -> ton bo nho
+    - Map -> HashMap: truy cap du lieu nhanh -> tim kiem nhanh nhat -> ton bo nho nhat
+                    + truy cap theo key la mot object
+                    + key:value
 4. File -> LAB211
 5. Try catch -> LAB211
  */
@@ -107,11 +110,9 @@ public class Tester {
 
     public static void main(String[] args) {
         Item trasua = new Drink("D001", "Tra Sua", 30000);
-        Customer thuy = new Customer("C001", "Do Thanh Thuy", 20);
-        thuy.addItem(trasua);
-        thuy.addItem(trasua);
-        thuy.addItem(trasua);
-        System.out.println(trasua.getPrice() * thuy.removeItem(trasua));
-        System.out.println(thuy.getCash());
+        Application app = new Application();
+        Customer cus = new Customer("C0012", "Nguyen Van A" , 20 );
+        app.addCustomer(cus);
+        app.showCustomers();
     }
 }

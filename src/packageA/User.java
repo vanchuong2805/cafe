@@ -4,11 +4,12 @@
  */
 package packageA;
 
+
 /**
  *
  * @author chuon
  */
-public abstract class User {
+public abstract class User implements Comparable<User>{
     private String id;
     private String name;
     private int age;
@@ -52,6 +53,13 @@ public abstract class User {
     @Override
     public String toString() {
         return String.format("id: %s, name: %s, age: %d", id, name, age);
+    }
+
+   
+
+    @Override
+    public int compareTo(User o) {
+        return this.id.compareToIgnoreCase(o.id);
     }
     
     

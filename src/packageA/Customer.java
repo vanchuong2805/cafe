@@ -13,7 +13,9 @@ import java.util.Map;
  */
 public class Customer extends User{
     // Map -> hashMap -> Item:Integer 
-    
+    // Map<DATATYPE KEY, DATATYPE VALUE> luu data duoi dang key:value
+    // KEY là duy nhat
+    // Map là 1 interface -> new object -> phai new thong qua hashmap -> da hinh ke thua trong OOP
     private Map<Item, Integer> cash;
     
     public Customer() {
